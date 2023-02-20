@@ -1,15 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './assets/css/app.css'
+import reactLogo from "./assets/images/react.svg";
+import "./assets/css/app.css";
+import { BrowserRouter as Router, Route, Link, BrowserRouter } from "react-router-dom";
+import HomePage from "./pages/HomePage";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <h1 className='text-3xl font-bold underline'>
-      Hello World!!!
-    </h1>
-  )
+   return (
+      <div className="App">
+         <BrowserRouter>
+            <Route path="/" component={HomePage} />
+         </BrowserRouter>
+      </div>
+   );
 }
 
-export default App
+export default App;
